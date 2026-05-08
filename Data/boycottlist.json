@@ -1,0 +1,162 @@
+[
+  {
+    "id": "koch-industries",
+    "name": "Koch Industries",
+    "pattern": "Koch Industries",
+    "brand_aliases": ["Georgia-Pacific", "Angel Soft", "Brawny", "Dixie", "Quilted Northern", "Sparkle", "Vanity Fair", "Mardi Gras"],
+    "match_type": "string",
+    "tie_statement": "Company with documented financial and political ties to Trump administration officials.",
+    "explanation": "Koch Industries and subsidiaries have supported conservative causes. Georgia-Pacific owns Angel Soft, Dixie, Brawny, and Quilted Northern paper products.",
+    "source": {
+      "name": "OpenSecrets",
+      "url": "https://www.opensecrets.org/orgs/koch-industries"
+    },
+    "alternative": "Seventh Generation, Who Gives A Crap, or Bamboo-based paper products",
+    "status": "active",
+    "urgent": false
+  },
+  {
+    "id": "procter-gamble",
+    "name": "Procter & Gamble",
+    "pattern": "Procter & Gamble",
+    "brand_aliases": ["Charmin", "Bounty", "Pampers", "Tide", "Crest", "Oral-B", "Gillette", "Head & Shoulders", "Pantene", "Olay", "P&G"],
+    "match_type": "string",
+    "tie_statement": "Major corporation with documented political contributions to Trump-aligned PACs.",
+    "explanation": "P&G owns household brands including Charmin toilet paper, Bounty paper towels, and Tide detergent.",
+    "source": {
+      "name": "FEC Records",
+      "url": "https://www.fec.gov/data/receipts/individual-contributions/"
+    },
+    "alternative": "Method cleaning products, Tom's of Maine, or local/organic alternatives",
+    "status": "active",
+    "urgent": false
+  },
+  {
+    "id": "my-pillow",
+    "name": "MyPillow",
+    "pattern": "MyPillow",
+    "brand_aliases": ["Mike Lindell", "My Pillow"],
+    "match_type": "string",
+    "tie_statement": "Brand led by prominent Trump supporter and advisor Mike Lindell.",
+    "explanation": "Founder Mike Lindell was a close Trump ally, funding election denial efforts and appearing as a public surrogate.",
+    "source": {
+      "name": "AP News",
+      "url": "https://apnews.com/article/election-2020-mike-lindell-4c7fa5b44d484dc19e48e9a23f72d8a1"
+    },
+    "alternative": "Avocado Green Pillow, Purple Pillow, or other eco-friendly bedding brands",
+    "status": "active",
+    "urgent": true
+  },
+  {
+    "id": "goya-foods",
+    "name": "Goya Foods",
+    "pattern": "Goya",
+    "brand_aliases": ["Goya Foods", "Goya Beans", "Goya Rice"],
+    "match_type": "string",
+    "tie_statement": "CEO publicly praised Trump at White House event in 2020.",
+    "explanation": "CEO Robert Unanue praised Donald Trump at the White House, leading to widespread boycotts in Latino communities.",
+    "source": {
+      "name": "NPR",
+      "url": "https://www.npr.org/2020/07/10/889599185/goya-foods-boycott-called-after-ceo-praises-trump"
+    },
+    "alternative": "La Preferida, Iberia, Mahatma Rice, or other Latino-owned food brands",
+    "status": "active",
+    "urgent": false
+  },
+  {
+    "id": "trump-organization",
+    "name": "Trump Organization",
+    "pattern": "Trump",
+    "brand_aliases": ["Trump Hotels", "Trump Golf", "Trump Winery", "Trump Organization", "Mar-a-Lago"],
+    "match_type": "string",
+    "tie_statement": "Directly owned by Donald Trump and his family.",
+    "explanation": "The Trump Organization encompasses hotels, golf courses, and other properties directly owned by Donald Trump.",
+    "source": {
+      "name": "Forbes",
+      "url": "https://www.forbes.com/trump-organization/"
+    },
+    "alternative": "Hyatt, Marriott, Hilton, or locally-owned hotels",
+    "status": "active",
+    "urgent": true
+  },
+  {
+    "id": "chick-fil-a",
+    "name": "Chick-fil-A",
+    "pattern": "Chick-fil-A",
+    "brand_aliases": ["Chickfila", "Chick fil A", "CFA"],
+    "match_type": "string",
+    "tie_statement": "Corporate leadership and foundation donations aligned with Trump-supporting conservative causes.",
+    "explanation": "Chick-fil-A executives and foundation historically supported anti-LGBTQ organizations connected to Trump allies.",
+    "source": {
+      "name": "USA Today",
+      "url": "https://www.usatoday.com/story/news/nation/2019/03/21/chick-fil-foundation-lgbtq-donations/3226067002/"
+    },
+    "alternative": "Popeyes, KFC, or local chicken restaurants",
+    "status": "active",
+    "urgent": false
+  },
+  {
+    "id": "hobby-lobby",
+    "name": "Hobby Lobby",
+    "pattern": "Hobby Lobby",
+    "brand_aliases": ["Hobby Lobby Stores"],
+    "match_type": "string",
+    "tie_statement": "Owners are major Trump donors and conservative cause supporters.",
+    "explanation": "The Green family, owners of Hobby Lobby, have been significant contributors to Trump campaigns and conservative PACs.",
+    "source": {
+      "name": "OpenSecrets",
+      "url": "https://www.opensecrets.org/donor-lookup"
+    },
+    "alternative": "Michaels, Joann Fabrics, or local craft stores",
+    "status": "active",
+    "urgent": false
+  },
+  {
+    "id": "new-balance",
+    "name": "New Balance",
+    "pattern": "New Balance",
+    "brand_aliases": ["NB", "New Balance Athletics"],
+    "match_type": "string",
+    "tie_statement": "Company executives initially expressed support for Trump's trade policies.",
+    "explanation": "New Balance leadership made statements supporting Trump's stance on trade deals.",
+    "source": {
+      "name": "Wall Street Journal",
+      "url": "https://www.wsj.com/articles/new-balance-tries-to-step-away-from-trump-politics-1478887544"
+    },
+    "alternative": "Adidas, Nike, Allbirds, or other athletic shoe brands",
+    "status": "active",
+    "urgent": false
+  },
+  {
+    "id": "tesla",
+    "name": "Tesla",
+    "pattern": "Tesla",
+    "brand_aliases": ["Tesla Motors", "Model S", "Model 3", "Model X", "Model Y", "Cybertruck"],
+    "match_type": "string",
+    "tie_statement": "CEO Elon Musk became a major Trump supporter and advisor.",
+    "explanation": "Elon Musk endorsed Trump and became heavily involved in supporting his 2024 campaign.",
+    "source": {
+      "name": "Reuters",
+      "url": "https://www.reuters.com/business/autos-transportation/tesla-elon-musk"
+    },
+    "alternative": "Ford Lightning, Chevrolet Bolt, BMW i-series, or other electric vehicles",
+    "status": "active",
+    "urgent": true
+  },
+  {
+    "id": "home-depot",
+    "name": "Home Depot",
+    "pattern": "Home Depot",
+    "brand_aliases": ["The Home Depot", "HD"],
+    "match_type": "string",
+    "tie_statement": "Founders and executives have been major Trump campaign contributors.",
+    "explanation": "Home Depot co-founder Bernie Marcus was a significant Trump supporter and donor.",
+    "source": {
+      "name": "Atlanta Journal-Constitution",
+      "url": "https://www.ajc.com/news/local/bernie-marcus-trump-supporter"
+    },
+    "alternative": "Lowe's, Menards, or local hardware stores",
+    "status": "active",
+    "urgent": false
+  }
+]
