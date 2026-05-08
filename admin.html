@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Your Boycott List — Admin</title>
+  <style>
+    :root { --bg:#fafafa; --card:#fff; --line:#e5e5e5; --ink:#111; --ink2:#555; --acc:#ffc107; }
+    body{margin:0; font:14px/1.4 system-ui, Arial; background:var(--bg); color:var(--ink);}
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:3}
+    h1{font-size:16px;margin:0}
+    .row{display:flex;gap:16px;padding:16px}
+    .col{flex:1;min-width:320px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+    .card header{border:0;border-bottom:1px solid var(--line);border-radius:10px 10px 0 0}
+    .pad{padding:12px 14px}
+    .btn{border:1px solid #bbb;background:#fff;padding:6px 10px;border-radius:6px;cursor:pointer}
+    .btn-primary{background:var(--acc);border-color:#e0a800}
+    .btn-row{display:flex;gap:8px;flex-wrap:wrap}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:6px 8px;border-top:1px solid var(--line);vertical-align:top}
+    th{background:#f6f6f6;text-align:left;font-weight:700}
+    input[type="text"], textarea{width:100%;box-sizing:border-box;border:1px solid #ccc;border-radius:6px;padding:6px 8px}
+    textarea{min-height:72px}
+    small{color:var(--ink2)}
+    .muted{color:var(--ink2)}
+    .pill{display:inline-block;background:#fff3cd;border:1px solid #f0c36d;border-radius:999px;padding:2px 8px;margin-right:6px}
+    .right{margin-left:auto}
+    .donate{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .donate a.btn{border-color:#e0a800}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your Boycott List — Admin</h1>
+    <div class="btn-row">
+      <div id="donate-bar" class="donate">
+        <strong>Support:</strong>
+        <!-- donation buttons inserted by admin.js -->
+      </div>
+      <button id="btn-export" class="btn">Export JSON</button>
+      <label class="btn">
+        Import JSON <input id="file-import" type="file" accept="application/json" style="display:none">
+      </label>
+      <button id="btn-seed" class="btn">Reload seed</button>
+      <label class="btn">
+        <input id="supporter" type="checkbox"> Supporter (unlock whitelist)
+      </label>
+    </div>
+  </header>
+
+  <div class="row">
+    <div class="col card">
+      <header class="pad"><strong>Boycott List</strong> <span class="muted" id="count-list"></span></header>
+      <div class="pad">
+        <div class="btn-row" style="margin-bottom:8px">
+          <button id="btn-add" class="btn btn-primary">Add item</button>
+          <small class="muted">Tip: use Edit to maintain aliases/brands and sources.</small>
+        </div>
+        <table id="tbl-list">
+          <thead>
+            <tr><th style="width:28%">Name</th><th>Pattern / Aliases</th><th style="width:26%">Source</th><th style="width:100px">Actions</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="col card">
+      <header class="pad"><strong>Whitelist</strong> <span class="muted" id="count-wl"></span></header>
+      <div class="pad">
+        <table id="tbl-wl">
+          <thead><tr><th>Label</th><th style="width:120px">Actions</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Simple dialog -->
+  <div id="dlg" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.35);align-items:center;justify-content:center;z-index:10">
+    <div style="width:min(720px,94vw);background:#fff;border:1px solid #ddd;border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,.25)">
+      <div style="padding:12px 14px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center">
+        <strong id="dlg-title">Edit</strong>
+        <button id="dlg-x" class="btn">✕</button>
+      </div>
+      <div class="pad" id="dlg-body"></div>
+      <div class="pad" style="display:flex;justify-content:flex-end;gap:8px">
+        <button id="dlg-cancel" class="btn">Cancel</button>
+        <button id="dlg-ok" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
