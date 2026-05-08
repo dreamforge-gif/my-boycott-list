@@ -1,0 +1,13 @@
+{
+  "supabase_url": "https://sykzevzycuogbsyorrki.supabase.co",
+  "supabase_anon_key": "sb_publishable_Qkq3Gbu68lA52X4Bt0795w_y4RvDFto",
+  "dataset_endpoint": "/rest/v1/brands?select=id,name,pattern,match_type,tie_statement,explanation,alternative,source,status,brand_aliases,urgent&order=name",
+  "refresh_hours": 24,
+  "donations": {
+    "5": "#",
+    "20": "#",
+    "50": "#",
+    "100": "#",
+    "custom": "#"
+  }
+}
