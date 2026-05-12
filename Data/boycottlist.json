@@ -3,7 +3,16 @@
     "id": "koch-industries",
     "name": "Koch Industries",
     "pattern": "Koch Industries",
-    "brand_aliases": ["Georgia-Pacific", "Angel Soft", "Brawny", "Dixie", "Quilted Northern", "Sparkle", "Vanity Fair", "Mardi Gras"],
+    "brand_aliases": [
+      "Georgia-Pacific",
+      "Angel Soft",
+      "Brawny",
+      "Dixie",
+      "Quilted Northern",
+      "Sparkle",
+      "Vanity Fair",
+      "Mardi Gras"
+    ],
     "match_type": "string",
     "tie_statement": "Company with documented financial and political ties to Trump administration officials.",
     "explanation": "Koch Industries and subsidiaries have supported conservative causes. Georgia-Pacific owns Angel Soft, Dixie, Brawny, and Quilted Northern paper products.",
@@ -19,7 +28,19 @@
     "id": "procter-gamble",
     "name": "Procter & Gamble",
     "pattern": "Procter & Gamble",
-    "brand_aliases": ["Charmin", "Bounty", "Pampers", "Tide", "Crest", "Oral-B", "Gillette", "Head & Shoulders", "Pantene", "Olay", "P&G"],
+    "brand_aliases": [
+      "Charmin",
+      "Bounty",
+      "Pampers",
+      "Tide",
+      "Crest",
+      "Oral-B",
+      "Gillette",
+      "Head & Shoulders",
+      "Pantene",
+      "Olay",
+      "P&G"
+    ],
     "match_type": "string",
     "tie_statement": "Major corporation with documented political contributions to Trump-aligned PACs.",
     "explanation": "P&G owns household brands including Charmin toilet paper, Bounty paper towels, and Tide detergent.",
@@ -35,7 +56,10 @@
     "id": "my-pillow",
     "name": "MyPillow",
     "pattern": "MyPillow",
-    "brand_aliases": ["Mike Lindell", "My Pillow"],
+    "brand_aliases": [
+      "Mike Lindell",
+      "My Pillow"
+    ],
     "match_type": "string",
     "tie_statement": "Brand led by prominent Trump supporter and advisor Mike Lindell.",
     "explanation": "Founder Mike Lindell was a close Trump ally, funding election denial efforts and appearing as a public surrogate.",
@@ -51,7 +75,11 @@
     "id": "goya-foods",
     "name": "Goya Foods",
     "pattern": "Goya",
-    "brand_aliases": ["Goya Foods", "Goya Beans", "Goya Rice"],
+    "brand_aliases": [
+      "Goya Foods",
+      "Goya Beans",
+      "Goya Rice"
+    ],
     "match_type": "string",
     "tie_statement": "CEO publicly praised Trump at White House event in 2020.",
     "explanation": "CEO Robert Unanue praised Donald Trump at the White House, leading to widespread boycotts in Latino communities.",
@@ -66,9 +94,15 @@
   {
     "id": "trump-organization",
     "name": "Trump Organization",
-    "pattern": "Trump",
-    "brand_aliases": ["Trump Hotels", "Trump Golf", "Trump Winery", "Trump Organization", "Mar-a-Lago"],
-    "match_type": "string",
+    "pattern": "Trump Organization|Trump Hotel|Trump Tower|Trump Golf|Trump Winery|Trump National|Mar-a-Lago|Trump SoHo",
+    "brand_aliases": [
+      "Trump Hotels",
+      "Trump Golf",
+      "Trump Winery",
+      "Trump Organization",
+      "Mar-a-Lago"
+    ],
+    "match_type": "regex",
     "tie_statement": "Directly owned by Donald Trump and his family.",
     "explanation": "The Trump Organization encompasses hotels, golf courses, and other properties directly owned by Donald Trump.",
     "source": {
@@ -83,7 +117,11 @@
     "id": "chick-fil-a",
     "name": "Chick-fil-A",
     "pattern": "Chick-fil-A",
-    "brand_aliases": ["Chickfila", "Chick fil A", "CFA"],
+    "brand_aliases": [
+      "Chickfila",
+      "Chick fil A",
+      "CFA"
+    ],
     "match_type": "string",
     "tie_statement": "Corporate leadership and foundation donations aligned with Trump-supporting conservative causes.",
     "explanation": "Chick-fil-A executives and foundation historically supported anti-LGBTQ organizations connected to Trump allies.",
@@ -99,7 +137,9 @@
     "id": "hobby-lobby",
     "name": "Hobby Lobby",
     "pattern": "Hobby Lobby",
-    "brand_aliases": ["Hobby Lobby Stores"],
+    "brand_aliases": [
+      "Hobby Lobby Stores"
+    ],
     "match_type": "string",
     "tie_statement": "Owners are major Trump donors and conservative cause supporters.",
     "explanation": "The Green family, owners of Hobby Lobby, have been significant contributors to Trump campaigns and conservative PACs.",
@@ -115,7 +155,10 @@
     "id": "new-balance",
     "name": "New Balance",
     "pattern": "New Balance",
-    "brand_aliases": ["NB", "New Balance Athletics"],
+    "brand_aliases": [
+      "NB",
+      "New Balance Athletics"
+    ],
     "match_type": "string",
     "tie_statement": "Company executives initially expressed support for Trump's trade policies.",
     "explanation": "New Balance leadership made statements supporting Trump's stance on trade deals.",
@@ -131,7 +174,14 @@
     "id": "tesla",
     "name": "Tesla",
     "pattern": "Tesla",
-    "brand_aliases": ["Tesla Motors", "Model S", "Model 3", "Model X", "Model Y", "Cybertruck"],
+    "brand_aliases": [
+      "Tesla Motors",
+      "Model S",
+      "Model 3",
+      "Model X",
+      "Model Y",
+      "Cybertruck"
+    ],
     "match_type": "string",
     "tie_statement": "CEO Elon Musk became a major Trump supporter and advisor.",
     "explanation": "Elon Musk endorsed Trump and became heavily involved in supporting his 2024 campaign.",
@@ -147,7 +197,10 @@
     "id": "home-depot",
     "name": "Home Depot",
     "pattern": "Home Depot",
-    "brand_aliases": ["The Home Depot", "HD"],
+    "brand_aliases": [
+      "The Home Depot",
+      "HD"
+    ],
     "match_type": "string",
     "tie_statement": "Founders and executives have been major Trump campaign contributors.",
     "explanation": "Home Depot co-founder Bernie Marcus was a significant Trump supporter and donor.",

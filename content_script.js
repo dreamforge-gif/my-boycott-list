@@ -1,4 +1,4 @@
-// content_script.js — v0.4.14c (badge reliability + shadow-dom banner)
+// content_script.js — v0.4.14d (badge reliability + shadow-dom banner)
 (function () {
   const SCAN_DEBOUNCE_MS = 600;
   let lastScan = 0;
@@ -327,7 +327,6 @@
 
   // -------------- Amazon-focused badge pass --------------
   function enhanceAmazonTiles(terms, hits) {
-    console.log("YBL: enhanceAmazonTiles called, terms:", terms, "hits:", hits);
     
     if (!/amazon\./i.test(location.hostname)) return;
     if (!terms || !terms.length) return;
@@ -344,13 +343,11 @@
     const regxes = terms.map((t) => ({ t, re: new RegExp(t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i") }));
 
     const tagTile = (tile) => {
-      console.log("YBL: tagTile called with tile:", tile);
       if (!tile || tile.dataset.yblTagged === "1") return;
       tile.dataset.yblTagged = "1";
 
       const titleEl = tile.querySelector("h2 a span, h2 a, h2 span");
       const titleText = (titleEl?.textContent || "").trim();
-      console.log("YBL: Title found:", titleText);
       if (!titleText) return;
 
       let matchedTerm = null, matchedItem = null;
@@ -358,12 +355,10 @@
         if (re.test(titleText)) { 
           matchedTerm = t; 
           matchedItem = termMap[t.toLowerCase()] || null; 
-          console.log("YBL: MATCH! Term:", t, "Item:", matchedItem?.name);
           break; 
         }
       }
       if (!matchedTerm) {
-        console.log("YBL: No match for title:", titleText);
         return;
       }
 
@@ -391,7 +386,6 @@
 
     // initial pass
     const tiles = $$(`[data-component-type="s-search-result"][data-asin]`, resultsRoot);
-    console.log("YBL: Found", tiles.length, "tiles to process");
     tiles.forEach(tagTile);
 
     // observe for lazy tiles/updates
