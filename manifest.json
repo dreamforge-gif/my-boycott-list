@@ -1,16 +1,30 @@
 {
   "manifest_version": 3,
-  "name": "Your Boycott List",
+  "name": "MyBoycottList",
   "version": "0.4.14",
-  "description": "Heads up when browsing companies with documented ties to Trump administration officials.",
-  "permissions": ["storage", "tabs", "scripting"],
-  "host_permissions": ["<all_urls>"],
-  "background": { "service_worker": "background.js" },
-  "action": { "default_popup": "admin.html" },
+  "description": "See which brands funded Trump's return to power \u2014 right while you shop. Primary sources. Alternatives included. Free.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "admin.html"
+  },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content_script.js"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content_script.js"
+      ],
       "run_at": "document_idle"
     }
   ],
@@ -27,7 +41,9 @@
         "config.json",
         "icons/*.png"
       ],
-      "matches": ["<all_urls>"]
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ]
 }
