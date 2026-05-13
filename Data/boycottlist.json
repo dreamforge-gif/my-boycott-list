@@ -25,34 +25,6 @@
     "urgent": false
   },
   {
-    "id": "procter-gamble",
-    "name": "Procter & Gamble",
-    "pattern": "Procter & Gamble",
-    "brand_aliases": [
-      "Charmin",
-      "Bounty",
-      "Pampers",
-      "Tide",
-      "Crest",
-      "Oral-B",
-      "Gillette",
-      "Head & Shoulders",
-      "Pantene",
-      "Olay",
-      "P&G"
-    ],
-    "match_type": "string",
-    "tie_statement": "Major corporation with documented political contributions to Trump-aligned PACs.",
-    "explanation": "P&G owns household brands including Charmin toilet paper, Bounty paper towels, and Tide detergent.",
-    "source": {
-      "name": "FEC Records",
-      "url": "https://www.fec.gov/data/receipts/individual-contributions/"
-    },
-    "alternative": "Method cleaning products, Tom's of Maine, or local/organic alternatives",
-    "status": "active",
-    "urgent": false
-  },
-  {
     "id": "my-pillow",
     "name": "MyPillow",
     "pattern": "MyPillow",
@@ -148,25 +120,6 @@
       "url": "https://www.opensecrets.org/donor-lookup"
     },
     "alternative": "Michaels, Joann Fabrics, or local craft stores",
-    "status": "active",
-    "urgent": false
-  },
-  {
-    "id": "new-balance",
-    "name": "New Balance",
-    "pattern": "New Balance",
-    "brand_aliases": [
-      "NB",
-      "New Balance Athletics"
-    ],
-    "match_type": "string",
-    "tie_statement": "Company executives initially expressed support for Trump's trade policies.",
-    "explanation": "New Balance leadership made statements supporting Trump's stance on trade deals.",
-    "source": {
-      "name": "Wall Street Journal",
-      "url": "https://www.wsj.com/articles/new-balance-tries-to-step-away-from-trump-politics-1478887544"
-    },
-    "alternative": "Adidas, Nike, Allbirds, or other athletic shoe brands",
     "status": "active",
     "urgent": false
   },
