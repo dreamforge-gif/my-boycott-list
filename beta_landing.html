@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MyBoycottList — Private Beta</title>
+<style>
+  :root {
+    --ink: #1a1a1a; --muted: #5a5a5a; --line: #e3e3e3;
+    --accent: #b3261e; --accent-dark: #8a1d17; --bg: #fcfbf9; --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink); background: var(--bg); line-height: 1.55;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 80px; }
+  header h1 { font-size: 1.9rem; margin: 0 0 6px; }
+  header p.tag { color: var(--muted); margin: 0 0 4px; font-size: 1.02rem; }
+  .pill { display: inline-block; background: #f3e6e5; color: var(--accent-dark);
+    font-size: .78rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; letter-spacing: .02em; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 22px; margin: 20px 0; }
+  h2 { font-size: 1.15rem; margin: 0 0 12px; }
+  ol.steps { margin: 0; padding-left: 20px; }
+  ol.steps li { margin: 7px 0; }
+  code { background: #f1f1ef; padding: 1px 6px; border-radius: 5px; font-size: .9em; }
+  .scenarios label, .form-row label.check { display: flex; gap: 10px; align-items: flex-start; margin: 9px 0; cursor: pointer; }
+  .scenarios input[type=checkbox] { margin-top: 4px; transform: scale(1.15); }
+  .form-row { margin: 14px 0; }
+  .form-row > label { display: block; font-weight: 600; margin-bottom: 5px; }
+  input[type=text], textarea, select {
+    width: 100%; padding: 9px 11px; border: 1px solid var(--line); border-radius: 8px;
+    font: inherit; background: #fff; }
+  textarea { min-height: 70px; resize: vertical; }
+  .rating { display: flex; gap: 14px; flex-wrap: wrap; }
+  .rating label { font-weight: 400; display: flex; gap: 5px; align-items: center; }
+  .btn { background: var(--accent); color: #fff; border: 0; border-radius: 8px;
+    padding: 12px 24px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+  .btn:hover { background: var(--accent-dark); }
+  .btn:disabled { opacity: .6; cursor: default; }
+  .note { color: var(--muted); font-size: .9rem; }
+  #status { margin-top: 14px; font-weight: 600; }
+  #status.ok { color: #1f7a3d; }
+  #status.err { color: var(--accent); }
+  .install-link { font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="pill">PRIVATE BETA · LIMITED SPOTS</span>
+    <h1>MyBoycottList</h1>
+    <p class="tag">See which brands funded Trump's return to power — right while you shop. Primary sources. Alternatives included. Free.</p>
+  </header>
+
+  <section>
+    <h2>What it is</h2>
+    <p>MyBoycottList is a free Chrome extension. As you browse and shop, it quietly flags brands with documented financial ties to Trump's 2024–2025 return to power — backed by primary sources (FEC filings, inaugural-fund disclosures, cabinet roles) — and suggests alternatives. No accounts, no tracking of your browsing. You stay in control.</p>
+  </section>
+
+  <section>
+    <h2>Install it (2 minutes)</h2>
+    <p class="note">This private beta installs directly (no Chrome Web Store listing yet). It works in Chrome, Edge, Brave, and other Chromium browsers.</p>
+    <ol class="steps">
+      <li>Download the extension: <a class="install-link" id="installLink" href="INSTALL_LINK_HERE">MyBoycottList-beta.zip</a></li>
+      <li>Unzip it to a folder you'll keep (don't delete it — the extension loads from there).</li>
+      <li>Open <code>chrome://extensions</code> in your browser.</li>
+      <li>Turn on <strong>Developer mode</strong> (top-right toggle).</li>
+      <li>Click <strong>Load unpacked</strong> and select the unzipped folder.</li>
+      <li>The MyBoycottList icon appears in your toolbar. You're in.</li>
+    </ol>
+  </section>
+
+  <section class="scenarios">
+    <h2>Try these 6 things</h2>
+    <p class="note">Check each one off as you go — it helps us know what you tested.</p>
+    <label><input type="checkbox" data-scenario="1"> 1. Installed the extension and saw the toolbar icon appear.</label>
+    <label><input type="checkbox" data-scenario="2"> 2. Visited a major shopping site and saw a brand get flagged.</label>
+    <label><input type="checkbox" data-scenario="3"> 3. Opened a flag and read the brand card (the tie, the source link, the alternative).</label>
+    <label><input type="checkbox" data-scenario="4"> 4. Visited a site with no flagged brand and confirmed nothing was wrongly flagged.</label>
+    <label><input type="checkbox" data-scenario="5"> 5. Clicked a primary-source link from a brand card and it opened correctly.</label>
+    <label><input type="checkbox" data-scenario="6"> 6. Looked at a suggested alternative for a flagged brand.</label>
+  </section>
+
+  <section>
+    <h2>Tell us how it went</h2>
+    <form id="feedbackForm">
+      <div class="form-row">
+        <label for="name">First name or handle (optional)</label>
+        <input type="text" id="name" name="name" autocomplete="off" />
+      </div>
+
+      <div class="form-row">
+        <label for="installed">Did it install successfully?</label>
+        <select id="installed" name="installed">
+          <option value="">—</option>
+          <option>Yes, no problems</option>
+          <option>Yes, but it was confusing</option>
+          <option>No, it failed</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="flagging">How accurate was the flagging? Did it catch the right brands?</label>
+        <textarea id="flagging" name="flagging"></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="misses">Any brands you expected it to flag but it missed?</label>
+        <textarea id="misses" name="misses"></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="bugs">Any bugs, glitches, or false positives?</label>
+        <textarea id="bugs" name="bugs"></textarea>
+      </div>
+
+      <div class="form-row">
+        <label>How clear was it to understand and use? (1 = confusing, 5 = very clear)</label>
+        <div class="rating">
+          <label><input type="radio" name="clarity_rating" value="1"> 1</label>
+          <label><input type="radio" name="clarity_rating" value="2"> 2</label>
+          <label><input type="radio" name="clarity_rating" value="3"> 3</label>
+          <label><input type="radio" name="clarity_rating" value="4"> 4</label>
+          <label><input type="radio" name="clarity_rating" value="5"> 5</label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="would_use">Would you keep using it / recommend it?</label>
+        <select id="would_use" name="would_use">
+          <option value="">—</option>
+          <option>Yes, definitely</option>
+          <option>Maybe</option>
+          <option>No</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="other">Anything else? (most useful field — be honest)</label>
+        <textarea id="other" name="other"></textarea>
+      </div>
+
+      <button type="submit" class="btn" id="submitBtn">Send feedback</button>
+      <div id="status" role="status"></div>
+      <p class="note" style="margin-top:14px">We store only what you type here, to improve the extension. No browsing data is collected.</p>
+    </form>
+  </section>
+</div>
+
+<script>
+  // MyBoycottList Supabase project (sykzevzycuogbsyorrki). Publishable anon key — safe for client use.
+  const SUPABASE_URL = "https://sykzevzycuogbsyorrki.supabase.co";
+  const ANON_KEY = "sb_publishable_Qkq3Gbu68lA52X4Bt0795w_y4RvDFto";
+  const TABLE = "mbl_beta_feedback";
+
+  const form = document.getElementById("feedbackForm");
+  const statusEl = document.getElementById("status");
+  const submitBtn = document.getElementById("submitBtn");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    statusEl.className = ""; statusEl.textContent = "";
+    submitBtn.disabled = true; submitBtn.textContent = "Sending…";
+
+    const scenarios = Array.from(document.querySelectorAll(".scenarios input[type=checkbox]:checked"))
+      .map((c) => Number(c.dataset.scenario));
+    const fd = new FormData(form);
+    const clarity = fd.get("clarity_rating");
+
+    const payload = {
+      name: fd.get("name") || null,
+      installed: fd.get("installed") || null,
+      flagging: fd.get("flagging") || null,
+      misses: fd.get("misses") || null,
+      bugs: fd.get("bugs") || null,
+      clarity_rating: clarity ? Number(clarity) : null,
+      would_use: fd.get("would_use") || null,
+      other: fd.get("other") || null,
+      scenarios_completed: scenarios
+    };
+
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/${TABLE}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "apikey": ANON_KEY,
+          "Authorization": `Bearer ${ANON_KEY}`,
+          "Prefer": "return=minimal"
+        },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      statusEl.className = "ok";
+      statusEl.textContent = "Thank you — feedback received. It genuinely helps.";
+      form.reset();
+      document.querySelectorAll(".scenarios input[type=checkbox]").forEach((c) => (c.checked = false));
+    } catch (err) {
+      statusEl.className = "err";
+      statusEl.textContent = "Something went wrong sending that. Please try again in a moment.";
+    } finally {
+      submitBtn.disabled = false; submitBtn.textContent = "Send feedback";
+    }
+  });
+</script>
+</body>
+</html>
