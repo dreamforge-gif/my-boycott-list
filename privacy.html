@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>MyBoycottList — Privacy Policy</title>
+<style>
+  :root {
+    --ink: #1a1a1a; --muted: #5a5a5a; --line: #e3e3e3;
+    --accent: #b3261e; --accent-dark: #8a1d17; --bg: #fcfbf9; --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink); background: var(--bg); line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 80px; }
+  header h1 { font-size: 1.9rem; margin: 0 0 6px; }
+  header p.tag { color: var(--muted); margin: 0 0 4px; font-size: 1.02rem; }
+  .pill { display: inline-block; background: #f3e6e5; color: var(--accent-dark);
+    font-size: .78rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; letter-spacing: .02em; }
+  .effective { color: var(--muted); font-size: .95rem; margin: 10px 0 0; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 22px; margin: 20px 0; }
+  h2 { font-size: 1.15rem; margin: 0 0 12px; }
+  h3 { font-size: 1rem; margin: 16px 0 6px; }
+  ul { margin: 8px 0; padding-left: 20px; }
+  li { margin: 5px 0; }
+  code { background: #f1f1ef; padding: 1px 6px; border-radius: 5px; font-size: .9em; }
+  a { color: var(--accent-dark); }
+  .lead { font-weight: 600; }
+  .muted { color: var(--muted); font-size: .9rem; }
+  footer { color: var(--muted); font-size: .88rem; margin-top: 28px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="pill">PRIVACY</span>
+    <h1>MyBoycottList — Privacy Policy</h1>
+    <p class="tag">Plain language. No legalese. No data sales.</p>
+    <p class="effective"><strong>Effective date:</strong> [SET ON PUBLISH]</p>
+  </header>
+
+  <section>
+    <h2>What MyBoycottList does</h2>
+    <p>MyBoycottList is a free Chrome browser extension that tells you, in real time, which brands you encounter while shopping online have documented financial ties to Trump's return to power — and what to buy instead.</p>
+  </section>
+
+  <section>
+    <h2>What data we collect</h2>
+    <p class="lead">We collect almost nothing about you.</p>
+    <h3>The extension does <em>not</em>:</h3>
+    <ul>
+      <li>Track your browsing history</li>
+      <li>Record which websites you visit</li>
+      <li>Store your search queries</li>
+      <li>Create a user account or profile</li>
+      <li>Collect your name, email address, or any personally identifiable information</li>
+      <li>Share any data with third parties for advertising purposes</li>
+      <li>Send analytics about your shopping behavior to any server</li>
+    </ul>
+    <h3>The extension <em>does</em>:</h3>
+    <ul>
+      <li>Fetch a list of flagged brands from our database (Supabase) when you install the extension and periodically (approximately once every 24 hours) to keep the brand list current</li>
+      <li>Store that brand list locally in your browser (Chrome's <code>chrome.storage.local</code>) for fast lookup while you browse</li>
+      <li>Match the current page you're viewing against the locally stored brand list — this matching happens entirely in your browser, not on a server</li>
+    </ul>
+    <p>The only network request MyBoycottList makes is to download the brand list. We do not send information about where you are browsing or what you are buying.</p>
+  </section>
+
+  <section>
+    <h2>The brand database</h2>
+    <p>Our brand database contains factual, publicly documented information about corporate political donations and financial ties. It is sourced from FEC filings, news reporting, and official public records. We do not store any information about users in this database.</p>
+  </section>
+
+  <section>
+    <h2>Local whitelist</h2>
+    <p>If you choose to add a brand to your personal whitelist (to suppress alerts), that list is stored locally in your browser via <code>chrome.storage.local</code>. It is never transmitted to our servers.</p>
+  </section>
+
+  <section>
+    <h2>Permissions</h2>
+    <p>MyBoycottList uses the following Chrome permissions:</p>
+    <ul>
+      <li><strong>storage</strong>: To save the brand list and your whitelist locally in your browser</li>
+      <li><strong>activeTab</strong>: To check the current page against the brand list when you click the extension icon</li>
+      <li><strong>scripting</strong> / <strong>content scripts</strong>: To display the flag banner or popup when a brand match is detected on a page you're viewing</li>
+    </ul>
+    <p>We do not request permissions to read all your tabs, access your history, or capture screenshots.</p>
+  </section>
+
+  <section>
+    <h2>Third-party services</h2>
+    <p>MyBoycottList uses <strong>Supabase</strong> to host the brand database. When the extension fetches the brand list, your IP address is included in that request — this is standard HTTP behavior and is not specific to MyBoycottList. Supabase's privacy policy is available at <a href="https://supabase.com/privacy">https://supabase.com/privacy</a>.</p>
+    <p>We do not use Google Analytics, Facebook Pixel, or any other advertising or tracking services.</p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>MyBoycottList is a general-purpose civic tool. We do not knowingly collect data from children under 13 and have no mechanism to do so.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If we make material changes to this policy, we will update the effective date at the top. The most current version will always be at this URL.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions about this policy? Contact: <a href="mailto:brandolon.b@dreamforge.vision">brandolon.b@dreamforge.vision</a></p>
+  </section>
+
+  <footer>
+    MyBoycottList is built and maintained by Brandolon Barnett / DreamForge.<br />
+    This is not a commercial product. No ads. No data sales. No subscriptions.
+  </footer>
+</div>
+</body>
+</html>
