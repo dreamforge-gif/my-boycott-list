@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "MyBoycottList",
-  "version": "0.4.14",
+  "version": "0.4.16",
   "description": "See which brands funded Trump's return to power \u2014 right while you shop. Primary sources. Alternatives included. Free.",
   "permissions": [
     "storage",

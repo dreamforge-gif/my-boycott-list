@@ -175,6 +175,11 @@
     renderList(); notify();
   };
 
+  $('#btn-tour').onclick = async ()=>{
+    await chrome.runtime.sendMessage({type:'startTour'});
+    window.close(); // close popup — new tab will open on amazon.com
+  };
+
   $('#supporter').addEventListener('change', e=>{
     setSupporter(e.target.checked);
   });

@@ -123,11 +123,24 @@ async function setupRefreshAlarm() {
   chrome.alarms.create(ALARM_NAME, { periodInMinutes });
 }
 
+// ── Tour helpers ──────────────────────────────────────────────────────────────
+
+async function startOnboardingTour() {
+  // Mark tour as active in session storage (cleared on browser restart)
+  await chrome.storage.session.set({ tourActive: true });
+  // Open amazon.com — step 1 of the tour will display there
+  chrome.tabs.create({ url: "https://www.amazon.com" });
+}
+
 // ── Lifecycle hooks ───────────────────────────────────────────────────────────
 
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener(({ reason }) => {
   refreshList();
   setupRefreshAlarm();
+  // Auto-launch onboarding tour on first install only
+  if (reason === "install") {
+    startOnboardingTour().catch(() => {});
+  }
 });
 
 chrome.runtime.onStartup.addListener(() => {
@@ -190,6 +203,19 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
       getConfig()
         .then((cfg) => sendResponse({ ok: true, config: cfg }))
         .catch(() => sendResponse({ ok: false }));
+      return true;
+
+    case "startTour":
+      // Called from admin popup "Take Tour" button
+      startOnboardingTour()
+        .then(() => sendResponse({ ok: true }))
+        .catch(() => sendResponse({ ok: false }));
+      return true;
+
+    case "clearTour":
+      chrome.storage.session.set({ tourActive: false }, () =>
+        sendResponse({ ok: true })
+      );
       return true;
 
     default:
