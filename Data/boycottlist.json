@@ -151,8 +151,7 @@
     "name": "Home Depot",
     "pattern": "Home Depot",
     "brand_aliases": [
-      "The Home Depot",
-      "HD"
+      "The Home Depot"
     ],
     "match_type": "string",
     "tie_statement": "Founders and executives have been major Trump campaign contributors.",
