@@ -27,6 +27,8 @@ MyBoycottList/
 4. Click **Load unpacked** and select the unzipped `MyBoycottList` folder.
 5. The MyBoycottList icon appears in the toolbar. Pin it if you like.
 
+> **What to expect:** You may see banners on multiple sites as you browse — the extension flags every listed brand, not just the one you started on. That's coverage working as intended across all 34 listed brands.
+
 To update to a newer beta build: replace the folder contents and click the refresh icon on the extension's card in `chrome://extensions`.
 
 ## Notes for the team

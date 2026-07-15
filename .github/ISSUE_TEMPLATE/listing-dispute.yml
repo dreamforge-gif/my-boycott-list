@@ -1,0 +1,69 @@
+name: Listing Dispute
+description: Dispute an existing listing — factual error, outdated information, or disagreement with how the criteria were applied.
+title: "[Listing Dispute]: "
+labels: ["listing-dispute", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We take accuracy seriously. Every listing cites its sources; if something is wrong, outdated, or misapplied, we want to fix it. Disputes backed by sources are reviewed fastest. Brand representatives are welcome to file disputes — please identify yourself as such below.
+  - type: input
+    id: brand-name
+    attributes:
+      label: Which listing are you disputing?
+      placeholder: e.g. Acme Corp
+    validations:
+      required: true
+  - type: dropdown
+    id: dispute-type
+    attributes:
+      label: Type of dispute
+      options:
+        - Factual error (the stated tie is incorrect)
+        - Outdated (the tie no longer holds / circumstances changed)
+        - Criteria application (facts are right, but shouldn't qualify under the published criteria)
+        - Alternative is problematic (a recommended alternative is itself objectionable)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: dispute-detail
+    attributes:
+      label: What specifically is wrong?
+      description: Quote the part of the listing you're disputing and explain the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Links to sources supporting your dispute (filings, court records, reporting, official statements). Required for factual/outdated disputes.
+      placeholder: |
+        - https://...
+    validations:
+      required: true
+  - type: textarea
+    id: requested-change
+    attributes:
+      label: Requested change
+      description: What outcome are you asking for? (correction, update, removal, alternative replacement, etc.)
+    validations:
+      required: true
+  - type: dropdown
+    id: affiliation
+    attributes:
+      label: Your relationship to the brand
+      options:
+        - No affiliation — community member
+        - Employee of the brand
+        - Official brand representative (PR/legal/executive)
+        - Other / prefer not to say
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: The evidence I've provided is accurate to the best of my knowledge.
+          required: true

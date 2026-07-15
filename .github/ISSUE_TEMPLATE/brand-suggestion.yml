@@ -1,0 +1,72 @@
+name: Brand Suggestion
+description: Suggest a brand for inclusion on MyBoycottList. Listings are curated — the team verifies every submission against the published criteria before anything goes live.
+title: "[Brand Suggestion]: "
+labels: ["brand-suggestion", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing! MBL uses **curated criteria**: every listing requires a documented, sourceable tie. Suggestions with primary sources (FEC filings, court records, major-outlet reporting) are reviewed fastest. Submissions without sources will be closed as unverifiable.
+  - type: input
+    id: brand-name
+    attributes:
+      label: Brand name
+      description: The consumer-facing brand (and parent company, if different).
+      placeholder: e.g. Acme Corp (subsidiary of Acme Holdings)
+    validations:
+      required: true
+  - type: input
+    id: brand-domains
+    attributes:
+      label: Website domain(s)
+      description: Domains where the extension should flag this brand.
+      placeholder: e.g. acme.com, acmestore.com
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Retail / consumer goods
+        - Grocery / food & beverage
+        - Technology
+        - Media
+        - Energy
+        - Finance
+        - Hospitality / entertainment
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: documented-tie
+    attributes:
+      label: Documented tie
+      description: Describe the specific, verifiable connection (donations, executive roles, contracts, endorsements). Include dollar amounts and dates where known.
+      placeholder: e.g. CEO donated $1M to X PAC in 2024 (FEC filing #...)
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Links to primary sources (FEC filings, court documents, SEC filings) or reporting from established outlets. At least one required.
+      placeholder: |
+        - https://www.fec.gov/...
+        - https://...
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-alternatives
+    attributes:
+      label: Suggested alternatives (optional)
+      description: Ethical alternatives consumers could use instead. Please check they are not themselves on the active list.
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: The tie I'm describing is documented in the sources I linked, not inference or rumor.
+          required: true
+        - label: I understand listings are curated and the team makes the final call against published criteria.
+          required: true
